@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sally ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="
+margin:0;
+font-family:Arial;
+text-align:center;
+background: linear-gradient(135deg,#ff69b4,#2b0033);
+color:white;
+padding:60px 20px;
+overflow:hidden;
+">
+
+<h1 style="text-shadow:0 0 15px white;">Hey Sally 🤍</h1>
+
+<p style="max-width:500px;margin:auto;font-size:20px;">
+I just want to say something simple and real.
+I care about you. I know I’ve made mistakes sometimes.
+I’m not perfect — but I’m trying to be better for us.
+</p>
+
+<br>
+
+<button onclick="showApology()"
+style="padding:15px 25px;border:none;border-radius:25px;
+background:white;color:black;font-size:16px;margin:10px;">
+Read My Apology 💌
+</button>
+
+<br><br>
+
+<button onclick="askGF()"
+style="padding:15px 25px;border:none;border-radius:25px;
+background:black;color:white;font-size:16px;margin:10px;">
+I Have One More Question 💍
+</button>
+
+<div id="hearts"></div>
+
+<script>
+
+function showApology(){
+document.body.innerHTML = `
+<h1 style="margin-top:120px;">Sally 🤍</h1>
+<p style="font-size:22px; max-width:500px; margin:auto;">
+I’m sorry for the moments I didn’t show enough appreciation.
+You deserve effort, attention, and respect.
+I’m learning from my mistakes and I want to do better.
+</p>
+`;
+}
+
+function askGF(){
+document.body.innerHTML = `
+<h1 style="margin-top:100px;">Sally ❤️</h1>
+<p style="font-size:26px;">
+After everything… will you officially be my girlfriend?
+</p>
+
+<button onclick="yes()" style="padding:15px 25px;margin:10px;border:none;border-radius:20px;background:green;color:white;">
+YES 😍
+</button>
+
+<button onclick="no()" style="padding:15px 25px;margin:10px;border:none;border-radius:20px;background:red;color:white;">
+Not Yet
+</button>
+`;
+}
+
+function yes(){
+document.body.innerHTML = `
+<h1 style="margin-top:150px;text-shadow:0 0 20px yellow;">
+She Said YES ❤️🔥
+</h1>
+<p style="font-size:25px;">
+Let’s build something real together.
+</p>
+<div style="font-size:60px;">✨💖✨</div>
+`;
+}
+
+function no(){
+alert("I understand ❤️ I’ll respect your pace and keep improving.");
+}
+
+// Floating hearts animation
+setInterval(()=>{
+let heart = document.createElement("div");
+heart.innerHTML = "🤍";
+heart.style.position="absolute";
+heart.style.left=Math.random()*100+"vw";
+heart.style.bottom="-50px";
+heart.style.fontSize="20px";
+heart.style.animation="floatUp 5s linear forwards";
+document.body.appendChild(heart);
+
+setTimeout(()=>{heart.remove();},5000);
+},900);
+
+</script>
+
+<style>
+@keyframes floatUp{
+from{transform:translateY(0);opacity:1;}
+to{transform:translateY(-800px);opacity:0;}
+}
+</style>
+
+</body>
+</html>
